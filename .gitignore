@@ -1,0 +1,18 @@
+# Build output
+build/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# IDE / Editor
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
