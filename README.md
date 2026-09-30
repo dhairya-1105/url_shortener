@@ -1,10 +1,10 @@
-# ShortX — Simple C++ URL Shortener + Load Balancer Simulator
+# A Simple C++ URL Shortener + Load Balancer Simulator
 
-ShortX is a high-performance, interview-ready portfolio project showcasing a custom **URL-shortening micro-service and Load Balancer Simulator** built in **C++17** with SQLite persistence, custom LRU caching, thread pool concurrency, asynchronous click analytics, and a lightweight React management dashboard.
+This is a high-performance **URL-shortening micro-service and Load Balancer Simulator** built in **C++17** with SQLite persistence, custom LRU caching, thread pool concurrency, asynchronous click analytics, and a lightweight React management dashboard.
 
 ---
 
-## 📌 Features
+## Features
 
 * **C++17 High Performance Backend**: Built using standard STL abstractions and single-header libraries (`cpp-httplib`, `nlohmann/json`, `sqlite3`).
 * **Base62 Short Code Encoding**: Converts unique 64-bit integer IDs to clean alphanumeric short codes (`[0-9a-zA-Z]`).
@@ -17,7 +17,7 @@ ShortX is a high-performance, interview-ready portfolio project showcasing a cus
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```text
                   React Dashboard (Port 3000)
@@ -49,7 +49,7 @@ ShortX is a high-performance, interview-ready portfolio project showcasing a cus
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 * **Backend**: C++17, `cpp-httplib` (HTTP), `sqlite3` (Database), `nlohmann/json` (JSON).
 * **Frontend**: React 18, Vite, Plain CSS (Glassmorphic aesthetics), Lucide React.
@@ -58,7 +58,7 @@ ShortX is a high-performance, interview-ready portfolio project showcasing a cus
 
 ---
 
-## 🚀 How to Build and Run
+## How to Build and Run
 
 ### Prerequisites
 * CMake 3.14 or higher
@@ -95,7 +95,7 @@ Open your browser at `http://localhost:3000`.
 
 ---
 
-## ⚡ Unit Tests & Benchmark Results
+## Unit Tests & Benchmark Results
 
 ### Running Unit Tests
 ```bash
@@ -144,7 +144,7 @@ Output:
 
 ---
 
-## 📡 REST API Documentation
+## REST API Documentation
 
 | Method | Endpoint | Description | Request / Response Sample |
 | :--- | :--- | :--- | :--- |
@@ -164,7 +164,7 @@ Output:
 
 ---
 
-## 🔑 Core Class Explanations for Technical Interviews
+## Some Technical Specifications:
 
 1. **`Base62Encoder`**: Converts auto-incremented integer primary keys to Base62 strings using remainder division over character set `[0-9a-zA-Z]`. Guarantees collision-free short codes.
 2. **`Database`**: Thin SQLite C-API wrapper managing `urls` and `click_events` tables with prepared statement binding and mutex-protected concurrency.
@@ -175,5 +175,5 @@ Output:
 
 ---
 
-## 📄 License
-MIT License. Created for technical interview demonstration.
+## License
+MIT License.
